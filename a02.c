@@ -11,10 +11,10 @@ double hullSpeed(double lgth)
 	double constfp = 1.34;
 
 	asm(
-		"		fldl		%[lgthin] 			\n"	  //load lgth to stack
-		"		fsqrt							      \n"   //square the top number of stack
-		"		fldl		%[constfpin]		\n"   //put constfp on stack
-		"		fmulp							      \n"   //mult the 2 num in the stack
+		"		fldl		%[lgthin] 			\n"   //load lgth to stack
+		"		fsqrt						\n"   //square the top number of stack
+		"		fldl		%[constfpin]			\n"   //put constfp on stack
+		"		fmulp						\n"   //mult the 2 num in the stack
 		"		fstpl		%[lgthout]			\n"   //pop lgth back to var
 
 		: [lgthout]		 "=m"	 (lgth) 			//outputs
